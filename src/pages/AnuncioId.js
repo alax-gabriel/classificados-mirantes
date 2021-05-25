@@ -1,5 +1,6 @@
 import React, { Component, useState, useEffect } from 'react';
 import TopBar from '../components/TopBar';
+import api from './../api';
 
 
 class AnuncioId extends Component{ 
@@ -8,26 +9,33 @@ class AnuncioId extends Component{
     }
     
     state = {
-        anuncio: "",
+        anuncio: {}
     }
+        
+    // componentDidMount(){
+    //     const anuncioID = this.props.match.params.anuncioId;
+    //     this.setState({anuncio: anuncioID,})
+    // }
+
+    async componentDidMount(){
+        const id = this.props.match.params.anuncioId;
+        console.log(id)
     
-    
-    componentDidMount(){
-        const anuncioID = this.props.match.params.anuncioId;
-        this.setState({anuncio: anuncioID,})
-        console.log("teste de console!");
+        const response = await api.get(`/anuncio/${id}`);
+        this.setState({anuncio: response.data,});
     }
+
     render(){
         const { anuncio } = this.state;
         return(
             <div>
                 <TopBar />
-                <h1>{anuncio}</h1>
+                <h1>{anuncio.title}</h1>
             </div>
         )
     }
-
-}
     
+}
+
 export default AnuncioId;
 
