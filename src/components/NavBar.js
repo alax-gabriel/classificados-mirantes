@@ -21,7 +21,7 @@ class NavBar extends Component{
                 <ul>
                     {anuncios.map(anuncio => (
                         <li key={anuncio._id}>
-                            <Link to={`/anuncio/${anuncio._id}`}>{anuncio.title}</Link>
+                            <Link to={`/anuncio/${anuncio._id}`}><img src={`${anuncio.image}`} /></Link>
                         </li>
                     ))}
                 </ul>
