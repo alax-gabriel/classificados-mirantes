@@ -11,11 +11,6 @@ class AnuncioId extends Component{
     state = {
         anuncio: {}
     }
-        
-    // componentDidMount(){
-    //     const anuncioID = this.props.match.params.anuncioId;
-    //     this.setState({anuncio: anuncioID,})
-    // }
 
     async componentDidMount(){
         const id = this.props.match.params.anuncioId;
@@ -31,6 +26,7 @@ class AnuncioId extends Component{
             <div>
                 <TopBar />
                 <h1>{anuncio.title}</h1>
+                <h2>{anuncio.description}</h2>
             </div>
         )
     }
