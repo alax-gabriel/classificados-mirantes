@@ -66,22 +66,35 @@ export const Grade = styled.div`
     }
 
     a {
+        display: flex;
+        align-items: center;
+        width: 300px;
+        height: 200px;
         text-decoration: none;
         display: block;
         margin-left: 0px;
         margin-bottom: 10px;
-        padding: 100px;
         background-color: #f5f5f5;
         border-radius: 5px;
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: fill;
     }
 
     li {
         padding: 10px;
     }
 
-    a:hover {
+    /* a:hover {
         background-color: #fafafa;
         border: 1px solid #bbb;
+    } */
+
+    img:hover {
+        opacity: 80%;
     }
 
     .anuncio1 {
