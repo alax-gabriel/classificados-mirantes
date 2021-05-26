@@ -9,11 +9,11 @@ import image3 from './../assets/images/memp.png'
 const CarouselContainer = () => {
     return(
     <Slide>
-        <Carousel prevLabel="" nextLabel="">
+        <Carousel prevLabel="" nextLabel="" className="carousel-container">
             <Carousel.Item>
-                <a href="#">
+                <a href="#" className="carousel-link">
                     <img
-                    className="d-block w-100"
+                    className="d-blockw-100"
                     src={image1}
                     alt="First slide"
                     />
@@ -24,9 +24,9 @@ const CarouselContainer = () => {
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-                <a href="#">
+                <a href="#" className="carousel-link">
                     <img
-                    className="d-block w-100"
+                    className="d-blockw-100"
                     src={image2}
                     alt="Second slide"
                     />
@@ -37,9 +37,9 @@ const CarouselContainer = () => {
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-                <a href="#">
+                <a href="#" className="carousel-link">
                     <img
-                    className="d-block w-100"
+                    className="d-blockw-100"
                     src={image3}
                     alt="Third slide"
                     />

@@ -12,8 +12,8 @@ const TopBar = () => {
                     <h1 className="teste">MIRANTES</h1>
                 </Link>
             </div>
+                <Link to="/anuncie">Anuncie aqui</Link>
   
-            <Link to="/anuncie">Anuncie aqui</Link>
         </MenuTopo>                   
     )
 }

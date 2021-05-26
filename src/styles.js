@@ -5,11 +5,18 @@ export const MenuTopo = styled.div`
         margin: 0 auto;
         padding: 0;
     }
+    width: 100%;
+    height: 12%;
+    max-height: 60px;
+    min-height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
     padding: 20px;
+    position: fixed;
+    z-index: +1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
     .titulo {
         display: flex;
@@ -21,7 +28,7 @@ export const MenuTopo = styled.div`
 
     a {
         color: #777;
-        padding: 10px;
+        padding: 5px;
         text-decoration: none;
     }
 
@@ -41,9 +48,39 @@ export const MenuTopo = styled.div`
 `
 
 export const Slide = styled.div`
-    width: 60%;
-    height: 40%;
     margin: 0 auto;
+    padding-top: 10%;
+    width: 80%;
+    height: 100%;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+
+    .carousel-container {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        background-color: #ccc;
+        width: 100%;
+    }
+
+    .carousel-link {
+        width: 80%;
+        min-height: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .carousel-link img {
+        min-height: 200px;
+        height: 50vh; 
+        width: 70vw;
+    }
+
+    .carousel-link img:hover {
+        opacity: 0.8;
+    }
 `
 
 export const Grade = styled.div`
@@ -53,7 +90,6 @@ export const Grade = styled.div`
     }
     
     height: 50%;
-    /* color: red; */
     margin: 10px;
     display: flex;
     align-items: center;
@@ -88,10 +124,6 @@ export const Grade = styled.div`
         padding: 10px;
     }
 
-    /* a:hover {
-        background-color: #fafafa;
-        border: 1px solid #bbb;
-    } */
 
     img:hover {
         opacity: 80%;

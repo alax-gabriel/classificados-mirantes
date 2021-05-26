@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import api from '../api.js';
 import { Grade } from './../styles.js';
 import { Link } from 'react-router-dom';
+import CarouselContainer from './../components/CarouselContainer'
+
 
 class NavBar extends Component{
 
@@ -17,7 +19,9 @@ class NavBar extends Component{
     render(){
         const { anuncios } = this.state; 
         return(
-            <Grade>
+            <div>
+                <CarouselContainer />
+                <Grade>
                 <ul>
                     {anuncios.map(anuncio => (
                         <li key={anuncio._id}>
@@ -26,6 +30,7 @@ class NavBar extends Component{
                     ))}
                 </ul>
             </Grade>
+            </div>
         )
     }
 
