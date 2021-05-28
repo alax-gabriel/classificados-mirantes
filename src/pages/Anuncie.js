@@ -1,10 +1,10 @@
 import React from 'react';
-import TopBar from './../components/TopBar'
+import Header from '../components/Header'
 
 function Anuncie(){
     return(
         <div>
-            <TopBar />
+            <Header />
             Anuncie Aqui.
         </div>
     )

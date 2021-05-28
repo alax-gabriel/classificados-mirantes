@@ -1,13 +1,20 @@
 import React from 'react';
-import TopBar from './../components/TopBar'
-import NavBar from './../components/NavBar'
+import { Container } from '../styles';
+import Header from '../components/Header';
+import Main from '../components/Main';
+import MenuAside from '../components/MenuAside';
+import AdAside from '../components/AdAside';
+import Footer from '../components/Footer';
 
 function Home(){
     return(
-        <div>
-            <TopBar />
-            <NavBar />
-        </div>
+        <Container>
+            <Header />
+            <Main />
+            <MenuAside />
+            <AdAside />
+            <Footer />
+        </Container>
     )
 }
 

@@ -1,11 +1,11 @@
 import React from 'react';
-import { MenuTopo } from './../styles.js';
+import { L_header } from '../styles.js';
 import { Link } from 'react-router-dom';
 
 
-const TopBar = () => {
+const Header = () => {
     return(
-        <MenuTopo>
+        <L_header>
             <div>
                 <Link to="/" className="titulo">
                     <h1>CLASSIFICADOS</h1>  
@@ -14,8 +14,8 @@ const TopBar = () => {
             </div>
                 <Link to="/anuncie">Anuncie aqui</Link>
   
-        </MenuTopo>                   
+        </L_header>                   
     )
 }
 
-export default TopBar;
+export default Header;

@@ -1,5 +1,5 @@
 import React, { Component, useState, useEffect } from 'react';
-import TopBar from '../components/TopBar';
+import Header from '../components/Header';
 import api from './../api';
 
 
@@ -24,7 +24,7 @@ class AnuncioId extends Component{
         const { anuncio } = this.state;
         return(
             <div>
-                <TopBar />
+                <Header/>
                 <h1>{anuncio.title}</h1>
                 <h2>{anuncio.description}</h2>
             </div>

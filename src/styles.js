@@ -1,20 +1,39 @@
 import styled from "styled-components"
 
-export const MenuTopo = styled.div`
+//Container
+export const Container = styled.div`
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    /* grid-gap: 5px; */
+    grid-template-columns: 11% 75% 14%;
+    grid-template-rows: 1fr 10fr 1fr;
+    grid-template-areas: 
+    "header      header     header"
+    "menu_aside   main     ad_aside"
+    "footer      footer     footer";
+`
+
+//Header
+export const L_header = styled.div`
     *{
         margin: 0 auto;
         padding: 0;
     }
+    grid-area: header;
     width: 100%;
-    height: 12%;
-    max-height: 60px;
-    min-height: 60px;
+    height: 100%;
+    /* max-height: 60px;
+    min-height: 60px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
     padding: 20px;
-    position: fixed;
+    /* position: fixed; */
     z-index: +1;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
@@ -47,11 +66,17 @@ export const MenuTopo = styled.div`
     }
 `
 
+//Main
+export const L_main = styled.div`
+    grid-area: main;
+`
+
+//Main - Slide
 export const Slide = styled.div`
     margin: 0 auto;
-    padding-top: 10%;
-    width: 80%;
-    height: 100%;
+    /* padding-top: 10%; */
+    width: 100%;
+    /* height: 100%; */
     min-height: 100px;
     display: flex;
     justify-content: center;
@@ -83,12 +108,12 @@ export const Slide = styled.div`
     }
 `
 
+//Main - Grade
 export const Grade = styled.div`
     *{
         margin: 0 auto;
         padding: 0;
     }
-    
     height: 50%;
     margin: 10px;
     display: flex;
@@ -132,4 +157,27 @@ export const Grade = styled.div`
     .anuncio1 {
         margin-left: 10px;
     }
+`
+
+//MenuAside
+export const L_menuaside = styled.aside`
+    grid-area: menu_aside;
+    background-color: blue;
+`
+
+//AdAside
+export const L_adaside = styled.aside`
+    grid-area: ad_aside;
+    background-color: yellow;
+`
+
+//Footer
+export const L_footer = styled.div`
+    grid-area: footer;
+    align-items: end;
+    background-color: green;
+    height: 100px;
+    width: 100vw;
+    /* position: fixed; */
+    /* bottom: 0; */
 `
