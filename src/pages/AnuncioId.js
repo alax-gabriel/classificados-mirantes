@@ -1,5 +1,9 @@
 import React, { Component, useState, useEffect } from 'react';
+import { Container } from '../styles';
 import Header from '../components/Header';
+import MenuAside from '../components/MenuAside';
+import AdAside from '../components/AdAside';
+import Footer from '../components/Footer';
 import api from './../api';
 
 
@@ -23,11 +27,16 @@ class AnuncioId extends Component{
     render(){
         const { anuncio } = this.state;
         return(
-            <div>
+            <Container>
                 <Header/>
-                <h1>{anuncio.title}</h1>
-                <h2>{anuncio.description}</h2>
-            </div>
+                <div>
+                    <h1>{anuncio.title}</h1>
+                    <h2>{anuncio.description}</h2>
+                </div>
+                <MenuAside />
+                <AdAside />
+                <Footer />
+            </Container>
         )
     }
     
