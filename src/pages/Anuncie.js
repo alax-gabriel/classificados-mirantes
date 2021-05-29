@@ -1,12 +1,21 @@
 import React from 'react';
-import Header from '../components/Header'
+import { Container } from '../styles';
+import Header from '../components/Header';
+import MenuAside from '../components/MenuAside';
+import AdAside from '../components/AdAside';
+import Footer from '../components/Footer';
 
 function Anuncie(){
     return(
-        <div>
+        <Container>
             <Header />
-            Anuncie Aqui.
-        </div>
+            <div>
+                Anuncie aqui!
+            </div>
+            <MenuAside />
+            <AdAside />
+            <Footer />
+        </Container>
     )
 }
 
