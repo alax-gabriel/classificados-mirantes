@@ -8,9 +8,8 @@ export const Container = styled.div`
     height: 100vh;
     width: 100vw;
     display: grid;
-    /* grid-gap: 5px; */
-    grid-template-columns: 11% 75% 14%;
-    grid-template-rows: 1fr 10fr 1fr;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: 
     "header      header     header"
     "menu_aside   main     ad_aside"
@@ -20,25 +19,41 @@ export const Container = styled.div`
 //Header
 export const L_header = styled.div`
     *{
-        margin: 0 auto;
+        margin: 0;
         padding: 0;
     }
     grid-area: header;
-    width: 100%;
-    height: 100%;
-    /* max-height: 60px;
-    min-height: 60px; */
+    /* width: 100%;
+    height: 100%; */
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background-color: #fff;
-    padding: 20px;
-    /* position: fixed; */
     z-index: +1;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-    .titulo {
+    .l_header_menu_button {
+        width: 15%;
+        padding-left: 20px;
+    }
+
+    .l_header_title {
+        margin: 0;
+        padding: 0;
+        width: 70%;
+
+        a {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .l_header_adup_button {
+        width: 15%;
+        margin: 0;
+        padding: 0;
         display: flex;
+        justify-content: center;
     }
 
     h1 {
@@ -48,6 +63,7 @@ export const L_header = styled.div`
     a {
         color: #777;
         padding: 5px;
+        padding-left: 0;
         text-decoration: none;
     }
 
@@ -61,14 +77,13 @@ export const L_header = styled.div`
         margin-left: 10px;
     }
 
-    button {
-        padding-right: 30px;
-    }
 `
 
 //Main
 export const L_main = styled.div`
     grid-area: main;
+    height: 100%;
+    width: 100%;
 `
 
 //Main - Slide
@@ -176,8 +191,8 @@ export const L_footer = styled.div`
     grid-area: footer;
     align-items: end;
     background-color: green;
-    height: 100px;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     /* position: fixed; */
     /* bottom: 0; */
 `
